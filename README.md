@@ -140,7 +140,7 @@ username@your-regular-prompt:/holbertonschool-simple_shell#
 * `gen-authors`: file that generate the AUTHORS file
 * `AUTHORS`: file containing the name of the crontributors to this repo
 
-For More Info About Informations Check The Man Page
+For More Informations Check The Man Page
 
 ## Authors
 
