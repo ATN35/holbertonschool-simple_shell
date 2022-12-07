@@ -2,7 +2,7 @@
 
 ## Description :
 
-The **Simple Shell** is a [Holberton School](https://www.holbertonschool.com "Holberton School") project, it simulate a basic **Unix Shell** with its respective commands. It uses the POSIX API to implement many of the same functionalities of the first Ken Thompson's Shell.
+The **Simple Shell** is a [Holberton School](https://www.holbertonschool.com "Holberton School") project, it simulates a basic **Unix Shell** with its respective commands. It uses the POSIX API to implement many of the same functionalities of the first Ken Thompson's Shell.
 
 ## Requirements :
 
@@ -67,7 +67,7 @@ The only difference is when you print an error, the name of the program must be 
 
 - In order to run this program, you have to start by cloning this repository with:
 ```
-git clone https://github.com/Theemiss/simple_shell
+git clone https://github.com/ATN35/holbertonschool-simple_shell.git
 ```
 
 - Then compile it with:
