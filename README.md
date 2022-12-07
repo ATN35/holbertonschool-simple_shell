@@ -97,6 +97,7 @@ Note that **echo $?** can be used to display the last return status.
 
 ## Examples :
 
+### In interactive mode
 - with pwd
 ```
 username@your-regular-prompt:/holbertonschool-simple_shell# ./hsh
@@ -120,6 +121,39 @@ $ exit
 username@your-regular-prompt:/holbertonschool-simple_shell#
 ```
 
+### In non-interactive mode
+- with echo "/bin/ls" | ./hsh
+```
+username@your-regular-prompt:/holbertonschool-simple_shell# echo "/bin/ls" | ./hsh
+AUTHORS  environ.c  EOF.c  errors.c  execute.c  exit.c  fork.c  frees.c  gen-authors  hsh  main.c  path.c  prompt.c  README.md  shell.h  strfunct.c  tokenize.c
+$
+```
+
+## To compare with the basic Unix Shell :
+
+### In interactive mode
+- with pwd
+```
+username@your-regular-prompt:/holbertonschool-simple_shell# pwd
+/holbertonschool-simple_shell
+username@your-regular-prompt:/holbertonschool-simple_shell#
+```
+
+- with ls
+```
+username@your-regular-prompt:/holbertonschool-simple_shell# ls
+AUTHORS  EOF.c  README.md  environ.c  errors.c  execute.c  exit.c  fork.c  frees.c  gen-authors  hsh  main.c  path.c  prompt.c  shell.h  strfunct.c  tokenize.c
+username@your-regular-prompt:/holbertonschool-simple_shell#
+```
+
+### In non-interactive mode
+- with echo "/bin/ls" | /bin/sh
+```
+username@your-regular-prompt:/holbertonschool-simple_shell# echo "/bin/ls" | /bin/sh
+AUTHORS  environ.c  EOF.c  errors.c  execute.c  exit.c  fork.c  frees.c  gen-authors  hsh  main.c  path.c  prompt.c  README.md  shell.h  strfunct.c  tokenize.c
+username@your-regular-prompt:/holbertonschool-simple_shell#
+```
+
 ## Files :
 
 * `README.md` : current file, contains information about this project
@@ -140,7 +174,11 @@ username@your-regular-prompt:/holbertonschool-simple_shell#
 * `gen-authors`: file that generate the AUTHORS file
 * `AUTHORS`: file containing the name of the crontributors to this repo
 
-For More Info About Informations Check The Man Page
+## Bugs :
+
+We are still reviewing our code in order to exeterminate our bugs.
+
+*For More Informations Check The Man Page*
 
 ## Authors
 
