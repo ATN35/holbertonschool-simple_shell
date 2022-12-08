@@ -32,7 +32,7 @@ int main(int ac, char **av, char **env)
 			if (_strcmp(command[0], "exit") != 0)
 				exitshell(command);
 			else if (_strcmp(command[0], "env") != 0)
-				print_env();
+				print_env(command);
 			else
 				_fork(command, av[0], env, i);
 		}

@@ -26,7 +26,7 @@ void _fork(char **command, char *name, char **env, int i);
 
 void execute(char **command, char *name, char **env, int i);
 
-void print_env(void);
+void print_env(char **command);
 
 char **_getpath(char **env);
 

@@ -2,10 +2,10 @@
 
 /**
  * print_env - Prints the environment built-in
- *
+ * @command: pointer to tokenized command.
  * Return: Nothing to returns
  */
-void print_env(void)
+void print_env(char **command)
 {
 	int index;
 	char nc = '\n';
@@ -15,4 +15,5 @@ void print_env(void)
 		write(STDOUT_FILENO, environ[index], _strlen(environ[index]));
 		write(STDOUT_FILENO, &nc, 1);
 	}
+	free_cm(command);
 }
