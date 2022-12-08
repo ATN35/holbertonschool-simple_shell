@@ -31,6 +31,8 @@ int main(int ac, char **av, char **env)
 			free(line);
 			if (_strcmp(command[0], "exit") != 0)
 				exitshell(command);
+			else if (_strcmp(command[0], "env") != 0)
+				print_env();
 			else
 				_fork(command, av[0], env, i);
 		}

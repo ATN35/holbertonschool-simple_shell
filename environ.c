@@ -7,18 +7,12 @@
  */
 void print_env(void)
 {
-	int i = 0, j = 0;
+	int index;
+	char nc = '\n';
 
-	while (environ[i])
+	for (index = 0; environ[index]; index++)
 	{
-		j = 0;
-		while (environ[i][j])
-		{
-			_putchar(environ[i][j]);
-			j++;
-		}
-		if (j != 0)
-			_putchar('\n');
-		i++;
+		write(STDOUT_FILENO, environ[index], _strlen(environ[index]));
+		write(STDOUT_FILENO, &nc, 1);
 	}
 }
