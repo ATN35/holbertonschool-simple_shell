@@ -43,5 +43,6 @@ void execute(char **command, char *name, char **env, int i)
 		}
 		msgerror(name, i, command);
 		free_cm(pathways);
+		free_exit(command);
 	}
 }
