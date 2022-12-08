@@ -14,7 +14,7 @@ void execute(char **command, char *name, char **env, int i)
 	unsigned int j = 0;
 
 	if (_strcmp(command[0], "env") != 0)
-		print_env(env);
+		print_env();
 	if (stat(command[0], &st) == 0)
 	{
 		if (execve(command[0], command, env) < 0)

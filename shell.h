@@ -8,8 +8,13 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
+#include <signal.h>
+
+extern char **environ;
 
 int main(int ac, char **av, char **env);
+
+int _putchar(char c);
 
 void prompt(void);
 
@@ -21,7 +26,7 @@ void _fork(char **command, char *name, char **env, int i);
 
 void execute(char **command, char *name, char **env, int i);
 
-void print_env(char **env);
+void print_env(void);
 
 char **_getpath(char **env);
 

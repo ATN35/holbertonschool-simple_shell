@@ -1,18 +1,24 @@
 #include "shell.h"
 
 /**
- * print_env - function that prints all enviromental variables.
- * @env: pointer to enviromental variables PATH.
+ * print_env - Prints the environment built-in
+ *
+ * Return: Nothing to returns
  */
-void print_env(char **env)
+void print_env(void)
 {
-	size_t i = 0, len = 0;
+	int i = 0, j = 0;
 
-	while (env[i])
+	while (environ[i])
 	{
-		len = _strlen(env[i]);
-		write(STDOUT_FILENO, env[i], len);
-		write(STDOUT_FILENO, "\n", 1);
+		j = 0;
+		while (environ[i][j])
+		{
+			_putchar(environ[i][j]);
+			j++;
+		}
+		if (j != 0)
+			_putchar('\n');
 		i++;
 	}
 }
