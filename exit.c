@@ -9,15 +9,15 @@ void exitshell(char **command, int j)
 {
 	int status = 0;
 
-	if (command[1] == NULL)
-	{
-		free_cm(command);
-		exit(EXIT_SUCCESS);
-	}
 	if (j == 2)
 	{
 		free_cm(command);
-		exit(j);
+		exit(2);
+	}
+	else if (command[1] == NULL)
+	{
+		free_cm(command);
+		exit(EXIT_SUCCESS);
 	}
 	status = _atoi(command[1]);
 	free_cm(command);
