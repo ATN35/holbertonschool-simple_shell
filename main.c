@@ -12,7 +12,7 @@ int main(int ac, char **av, char **env)
 	char *line = NULL, **command = NULL;
 	size_t len = 0;
 	ssize_t read_line = 0;
-	int i = 0, j = 0;
+	int i = 0;
 	(void)ac;
 
 	while (1)
@@ -30,15 +30,9 @@ int main(int ac, char **av, char **env)
 			command = tokenize(line, " \0");
 			free(line);
 			if (_strcmp(command[0], "exit") != 0)
-				exitshell(command, j);
+				exitshell(command);
 			else if (_strcmp(command[0], "env") != 0)
 				print_env(command);
-			else if (_strcmp(command[0], "/bin/ls") != 0 &&
-			    _strcmp(command[1], "/test_hbtn") != 0)
-			{
-				_fork(command, av[0], env, i);
-				j = 2;
-			}
 			else
 				_fork(command, av[0], env, i);
 		}

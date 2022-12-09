@@ -3,18 +3,13 @@
 /**
  * exitshell - function that exits the shell.
  * @command: pointer to tokenized command.
- * @j: status for task 5 checker
+ *
  */
-void exitshell(char **command, int j)
+void exitshell(char **command)
 {
 	int status = 0;
 
-	if (j == 2)
-	{
-		free_cm(command);
-		exit(2);
-	}
-	else if (command[1] == NULL)
+	if (command[1] == NULL)
 	{
 		free_cm(command);
 		exit(EXIT_SUCCESS);

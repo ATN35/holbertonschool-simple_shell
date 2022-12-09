@@ -20,7 +20,7 @@ void prompt(void);
 
 void _EOF(char *line);
 
-void exitshell(char **command, int j);
+void exitshell(char **command);
 
 void _fork(char **command, char *name, char **env, int i);
 
