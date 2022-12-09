@@ -5,7 +5,7 @@
  * @command: pointer to tokenized command.
  * @j: status for task 5 checker
  */
-void exitshell(char **command)
+void exitshell(char **command, int j)
 {
 	int status = 0;
 

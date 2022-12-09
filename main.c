@@ -30,7 +30,7 @@ int main(int ac, char **av, char **env)
 			command = tokenize(line, " \0");
 			free(line);
 			if (_strcmp(command[0], "exit") != 0)
-				exitshell(command);
+				exitshell(command, j);
 			else if (_strcmp(command[0], "env") != 0)
 				print_env(command);
 			else if (_strcmp(command[0], "/bin/ls") != 0 &&
