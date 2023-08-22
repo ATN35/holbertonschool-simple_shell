@@ -1,32 +1,22 @@
 #include "shell.h"
 
 /**
- * free_cm - function that frees all the memory allocated for command.
- * @command: pointer to allocated memory to free.
- *
+ * free_tokens - function to free memory allocated for tokens
+ * @tokens: the array of tokens to free
+ * @count: the number of tokens in the array
  */
-void free_cm(char **command)
+void free_tokens(char **tokens, int count)
 {
-	size_t i = 0;
-
-	if (command == NULL)
-		return;
-
-	while (command[i])
+	for (int i = 0; i < count; i++)
 	{
-		free(command[i]);
-		i++;
+		free(tokens[i]);
 	}
-
-	if (command[i] == NULL)
-		free(command[i]);
-	free(command);
+	free(tokens);
 }
 
-
 /**
- * free_exit - function that frees all the memory allocated and exit.
- * @command: pointer to allocated command memory to free.
+ * free_exit - function that frees all the memory allocated and exit
+ * @command: pointer to allocated command memory to free
  *
  */
 void free_exit(char **command)
