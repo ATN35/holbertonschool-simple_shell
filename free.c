@@ -15,8 +15,8 @@ void free_tokens(char **tokens, int count)
 }
 
 /**
- * free_cm - function to free memory allocated for commands.
- * @command: The array of command tokens to free.
+ * free_cm - function to free memory allocated for commands
+ * @command: The array of command tokens to free
  */
 void free_cm(char **command)
 {
