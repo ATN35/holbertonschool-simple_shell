@@ -13,7 +13,7 @@ char **tokenize(char *line, const char *delim)
 	int i = 0;
 
 	if (line == NULL || delim == NULL)
-		return NULL;
+		return (NULL);
 
 	tokens = malloc(bufsize * sizeof(char *));
 	if (tokens == NULL)
@@ -49,5 +49,5 @@ char **tokenize(char *line, const char *delim)
 		}
 	}
 	tokens[i] = NULL;
-	return tokens;
+	return (tokens);
 }
