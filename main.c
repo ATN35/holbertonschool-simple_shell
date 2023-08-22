@@ -14,6 +14,8 @@ int main(int ac, char **av, char **env)
 	ssize_t read_line = 0;
 	int i = 0;
 
+	(void)ac;
+
 	while (1)
 	{
 		i++;
