@@ -13,7 +13,6 @@
 extern char **environ;
 
 int main(int ac, char **av, char **env);
-pid_t getpid(void);
 int _putchar(char c);
 void prompt(void);
 void _fork(char **command, char *name, char **env, int i);
