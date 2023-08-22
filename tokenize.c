@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * tokenize - function that splits and creates an array of command tokens
  * @line: the input string to tokenize
