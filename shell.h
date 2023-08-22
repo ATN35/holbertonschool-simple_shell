@@ -25,6 +25,7 @@ void msgerror(char *name, int i, char **command);
 void _EOF(char *line);
 
 void free_tokens(char **tokens, int count);
+void free_cm(char **command);
 void free_exit(char **command);
 
 int _strcmp(char *s1, char *s2);
