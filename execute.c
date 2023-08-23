@@ -23,7 +23,7 @@ void execute(char **command, char *name, char **env, int i)
 	}
 	else
 	{
-		pathways = _getpath(env);
+		pathways = _getpath();
 		while (pathways[j])
 		{
 			full_path = _strcat(pathways[j], command[0]);
