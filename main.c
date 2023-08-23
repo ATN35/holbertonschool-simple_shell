@@ -39,7 +39,7 @@ int main(int ac, char **av, char **env)
 			else
 				_fork(command, av[0], env, i);
 
-			free_tokens(command);
+			free_cm(command);
 		}
 
 		line = NULL, len = 0;
