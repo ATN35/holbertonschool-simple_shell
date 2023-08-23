@@ -20,7 +20,7 @@ void exitshell(char **command);
 char **tokenize(char *line, const char *s);
 void execute(char **command, char *name, char **env, int i);
 void print_env(char **command);
-char **_getpath(char **env);
+char **_getpath(void);
 void msgerror(char *name, int i, char **command);
 void _EOF(char *line);
 
