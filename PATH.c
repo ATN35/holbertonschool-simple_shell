@@ -7,20 +7,10 @@
  */
 char **_getpath(char **env)
 {
-	char *pathvalue = NULL, **pathways = NULL;
-	unsigned int i = 0;
+	char *pathvalue = getenv("PATH");
 
-	while (env[i] != NULL)
-	{
-		if (_strcmp(env[i], "PATH") == 0)
-		{
-			pathvalue = strtok(env[i + 1], "=");
+	if (pathvalue == NULL)
+		return (NULL);
 
-			pathways = tokenize(pathvalue, ":");
-
-			return (pathways);
-		}
-		i++;
-	}
-	return (NULL);
+	return (tokenize(pathvalue, ":"));
 }
