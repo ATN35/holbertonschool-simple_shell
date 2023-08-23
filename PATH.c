@@ -2,10 +2,9 @@
 
 /**
  * _getpath - function to get the list of paths from PATH environment variable
- * @env: pointer to environmental variables
  * Return: an array of pointers to paths
  */
-char **_getpath(char **env)
+char **_getpath(void)
 {
 	char *pathvalue = getenv("PATH");
 
