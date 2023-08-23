@@ -9,7 +9,7 @@ char **tokenize(char *line, const char *delim)
 {
 	char *token = NULL, **tokens = NULL;
 	size_t bufsize = 100;
-	int i = 0;
+	size_t i = 0;
 
 	if (line == NULL || delim == NULL)
 		return (NULL);
