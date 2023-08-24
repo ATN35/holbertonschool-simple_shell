@@ -10,3 +10,4 @@ char **getPath(void)
 	}
 
 	return (NULL);
+}
