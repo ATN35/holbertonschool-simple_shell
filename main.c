@@ -2,9 +2,10 @@
 
 /**
  * main - shell entry point
- * @ac: number of input arguments
- * @av: array of input arguments
- * @env: array of environmental variables
+ * @input: stores user input
+ * @args: array to store command arguments
+ * @path: array to store PATH paths
+ * @i: loop variable
  * Return: always 0
  */
 int main(void) {
