@@ -3,22 +3,20 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <stdbool.h>
 
-#define MAX_CMD_LENGTH 100
-#define MAX_ARGS 10
+#define MAX_CMD_LENGTH 1024
+#define MAX_ARGS 64
 
 void printPrompt(void);
-void printError(char *msg);
-void printEnvironment(char *env[]);
 void executeCommand(char *cmd, char *args[]);
-void freeTokens(char *tokens[]);
-int tokenizeCommand(char *cmd, char *tokens[]);
-void exitShell(void);
+void tokenizeCommand(char *cmd, char *tokens[]);
 char **getPath(void);
+void exitShell(void);
+void printEnvironment(char *env[]);
+void freeTokens(char *tokens[]);
 
 #endif
