@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * main - shell entry point
  * @input: stores user input
@@ -9,9 +8,7 @@
  * Return: always 0
  */
 int main(void) {
-	char input[MAX_CMD_LENGTH];
-	char *args[MAX_ARGS];
-	char **path = getPath();
+	char input[MAX_CMD_LENGTH],char *args[MAX_ARGS],char **path = getPath();
 	int i;
 
 	while (1) {
@@ -26,15 +23,11 @@ int main(void) {
 			break;
 		}
 		tokenizeCommand(input, args);
-		struct stat path_stat;
-		if (stat(args[0], &path_stat) == 0) {
-			if (S_ISDIR(path_stat.st_mode)) {
-				printf("Le chemin est un répertoire.\n");
-			} else {
-				executeCommand(args[0], args);
-			}
+		if (isDirectory(args[0]) == 0) {
+			printf("C'est un répertoire.\n");
 		} else {
-			printf("Chemin introuvable.\n");
+			printf("Ce n'est pas un répertoire.\n");
+			executeCommand(args[0], args);
 		}
 		freeTokens(args);
 	}
