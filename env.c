@@ -1,8 +1,10 @@
 #include "shell.h"
 
-void printEnvironment(char *env[]) {
+void printEnvironment(char *env[])
+{
 	int i;
-	for (i = 0; env[i] != NULL; i++) {
+	for (i = 0; env[i] != NULL; i++)
+	{
 		printf("%s\n", env[i]);
 	}
 }
