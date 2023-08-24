@@ -3,35 +3,22 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <sys/wait.h>
-#include <unistd.h>
 #include <string.h>
-#include <signal.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <stdbool.h>
 
-extern char **environ;
+#define MAX_CMD_LENGTH 100
+#define MAX_ARGS 10
 
-int main(int ac, char **av, char **env);
-int _putchar(char c);
-void prompt(void);
-void _fork(char **command, char *name, char **env, int i);
-void exitshell(char **command);
-char **tokenize(char *line, const char *s);
-void execute(char **command, char *name, char **env, int i);
-void print_env(char **command);
-char **_getpath(void);
-void msgerror(char *name, int i, char **command);
-void _EOF(char *line);
-
-void free_tokens(char **tokens, int count);
-void free_cm(char **command);
-void free_exit(char **command);
-
-int _strcmp(char *s1, char *s2);
-unsigned int _strlen(char *s);
-char *_strcpy(char *dest, char *src);
-char *_strcat(char *dest, char *src);
-int _atoi(char *s);
+void printPrompt(void);
+void printError(char *msg);
+void printEnvironment(char *env[]);
+void executeCommand(char *cmd, char *args[]);
+void freeTokens(char *tokens[]);
+int tokenizeCommand(char *cmd, char *tokens[]);
+void exitShell(void);
+char **getPath(void);
 
 #endif
