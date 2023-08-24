@@ -7,4 +7,3 @@ void printEnvironment(char *env[])
 	{
 		printf("%s\n", env[i]);
 	}
-}
