@@ -1,7 +1,9 @@
 #include "shell.h"
 
-void printPrompt(void) {
-	if (isatty(STDIN_FILENO)) {
+void printPrompt(void)
+{
+	if (isatty(STDIN_FILENO))
+	{
 		printf("$ ");
 	}
 }
