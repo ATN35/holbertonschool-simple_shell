@@ -1,26 +1,46 @@
 #include "shell.h"
 
 /**
- * executeCommand - that uses fork and execve to execute the provided command
- * @cmd: pointer to a string
- * @args: pointer to an array of strings
+ * execute - function that executes a command.
+ * @command: pointer to tokienized command
+ * @name: name of the shell.
+ * @env: pointer to the enviromental variables.
+ * @i: number of excecution.
  */
-void executeCommand(char *cmd, char *args[])
+void execute(char **command, char *name, char **env, int i)
 {
-	pid_t pid = fork();
+	char **pathways = NULL, *full_path = NULL;
+	struct stat st;
+	unsigned int j = 0;
 
-	if (pid == 0)
+	if (stat(command[0], &st) == 0)
 	{
-		execvp(cmd, args);
-		executionError(cmd);
-		exit(1);
-	}
-	else if (pid < 0)
-	{
-		forkError();
+		if (execve(command[0], command, env) < 0)
+		{
+			perror(name);
+			free_exit(command);
+		}
 	}
 	else
 	{
-		wait(NULL);
+		pathways = _getpath(env);
+		while (pathways[j])
+		{
+			full_path = _strcat(pathways[j], command[0]);
+			j++;
+			if (stat(full_path, &st) == 0)
+			{
+				if (execve(full_path, command, env) < 0)
+				{
+					perror(name);
+					free_cm(pathways);
+					free_exit(command);
+				}
+				return;
+			}
+		}
+		msgerror(name, i, command);
+		free_cm(pathways);
+		free_exit(command);
 	}
 }

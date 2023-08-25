@@ -1,35 +1,20 @@
 #include "shell.h"
 
 /**
- * commandNotFound - command not found is replaced by the name of the command
- * @cmd: pointer to a string
+ * msgerror - function that prints message not found.
+ * @name: name of the shell.
+ * @i: i.
+ * @command: pointer to tokenized command.
  */
-void commandNotFound(char *cmd)
+void msgerror(char *name, int i, char **command)
 {
-	fprintf(stderr, "Commande introuvable : %s\n", cmd);
-}
-/**
- * executionError - indicates an error while executing the command
- * @cmd: pointer to a string
- */
+	char c;
 
-void executionError(char *cmd)
-{
-	perror(cmd);
-}
-
-/**
- * forkError - error message indicates an error creating a new process
- */
-void forkError(void)
-{
-	perror("Erreur lors de la création du processus");
-}
-
-/**
- * memoryAllocationError - error message indicates memory allocation error
- */
-void memoryAllocationError(void)
-{
-	perror("Erreur d'allocation de mémoire");
+	c = i + '0';
+	write(STDOUT_FILENO, name, _strlen(name));
+	write(STDOUT_FILENO, ": ", 2);
+	write(STDOUT_FILENO, &c, 1);
+	write(STDOUT_FILENO, ": ", 2);
+	write(STDOUT_FILENO, command[0], _strlen(command[0]));
+	write(STDOUT_FILENO, ": not found\n", 12);
 }

@@ -1,9 +1,20 @@
 #include "shell.h"
 
 /**
- * exitShell - allows the user to exit the shell
+ * exitshell - function that exits the shell.
+ * @command: pointer to tokenized command.
+ *
  */
-void exitShell(void)
+void exitshell(char **command)
 {
-	exit(0);
+	int status = 0;
+
+	if (command[1] == NULL)
+	{
+		free_cm(command);
+		exit(EXIT_SUCCESS);
+	}
+	status = _atoi(command[1]);
+	free_cm(command);
+	exit(status);
 }

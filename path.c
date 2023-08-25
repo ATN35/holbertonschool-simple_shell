@@ -1,19 +1,26 @@
 #include "shell.h"
 
 /**
- * getPath - that retrieves the paths from the environment variable PATH
- * and returns them as an array
- * Return: Nothing
+ * _getpath - function to gets the full value from.
+ * @env: pointer to enviromental variables PATH.
+ * Return: all tokenized pathways for commands.
  */
-char **getPath(void)
+char **_getpath(char **env)
 {
-	char *path = getenv("PATH");
+	char *pathvalue = NULL, **pathways = NULL;
+	unsigned int i = 0;
 
-	if (path == NULL)
+	pathvalue = strtok(env[i], "=");
+	while (env[i])
 	{
-		memoryAllocationError();
-		exit(1);
+		if (_strcmp(pathvalue, "PATH"))
+		{
+			pathvalue = strtok(NULL, "\n");
+			pathways = tokenize(pathvalue, ":");
+			return (pathways);
+		}
+		i++;
+		pathvalue = strtok(env[i], "=");
 	}
-
 	return (NULL);
 }

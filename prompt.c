@@ -1,12 +1,11 @@
 #include "shell.h"
 
 /**
- * printPrompt -  prints the shell prompt
-*/
-void printPrompt(void)
+ * prompt - function that prints the prompt
+ *
+ */
+void prompt(void)
 {
 	if (isatty(STDIN_FILENO))
-	{
-		printf("$ ");
-	}
+		write(STDOUT_FILENO, "$ ", 2);
 }
