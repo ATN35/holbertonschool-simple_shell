@@ -1,6 +1,5 @@
 #include "shell.h"
 
-
 /**
  * tokenizeCommand - the input command and returns the number of arguments
  * @cmd: the command to divide
