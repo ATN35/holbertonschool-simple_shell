@@ -7,12 +7,12 @@ void executeCommand(char *cmd, char *args[])
 	if (pid == 0)
 	{
 		execvp(cmd, args);
-		perror("Erreur lors de l'exécution de la commande");
+		executionError(cmd);
 		exit(1);
 	}
 	else if (pid < 0)
 	{
-		perror("Erreur lors de la création du processus");
+		forkError();
 	}
 	else
 	{

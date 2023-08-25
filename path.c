@@ -5,7 +5,7 @@ char **getPath(void)
 	char *path = getenv("PATH");
 	if (path == NULL)
 	{
-		perror("Erreur lors de la récupération du chemin PATH");
+		memoryAllocationError();
 		exit(1);
 	}
 

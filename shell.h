@@ -19,4 +19,9 @@ void exitShell(void);
 void printEnvironment(char *env[]);
 void freeTokens(char *tokens[]);
 
+void commandNotFound(char *cmd);
+void executionError(char *cmd);
+void forkError(void);
+void memoryAllocationError(void);
+
 #endif
