@@ -1,7 +1,8 @@
 #include "shell.h"
-
+/**
+ * exitShell - allows the user to exit the shell
+ */
 void exitShell(void)
 {
-	printf("Au revoir !\n");
 	exit(0);
 }
