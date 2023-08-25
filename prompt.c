@@ -9,3 +9,4 @@ void printPrompt(void)
 	{
 		printf("$ ");
 	}
+}
