@@ -12,7 +12,7 @@ void exitshell(char **command)
 	if (command[1] == NULL)
 	{
 		free_cm(command);
-		exit(EXIT_FAILURE);
+		exit(EXIT_SUCCESS);
 	}
 	status = _atoi(command[1]);
 	free_cm(command);
