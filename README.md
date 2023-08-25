@@ -86,7 +86,7 @@ $
 
 ## Contributors
 
-Antoine Lelievre - https://github.com/ATN35/holbertonschool-simple_shell
+Antoine Lelievre - https://github.com/ATN35
 
 ## License
 
