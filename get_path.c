@@ -4,7 +4,6 @@
  * *get_path - get a path where the command can be found
  * @ev: environment variables
  * @command: the command we are searching for
- *
  * Description: Take as input the command typed by the user and return a
  * string containing the path were the command can be found
  * Return: a pointer to the path or null (failure)
