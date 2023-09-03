@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * main - function simple shell
  * @argc: argument count (not used)
@@ -28,9 +29,9 @@ int main(int argc, char **argv, char **env)
 			count_command++;
 			i = 0;
 			if (strcmp(arguments[0], "env") == 0)
-				while (env[i]) /*print the environment*/
+				while (env[i])
 					printf("%s\n", env[i++]);
-			else /*test exit*/
+			else
 			{
 				if (strcmp(arguments[0], "exit") == 0)
 					break;
