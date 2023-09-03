@@ -3,7 +3,6 @@
 /**
  * free_args - free arguments
  * @arguments: arguments
- *
  * Description: free memory
  * Return: Nothing
  */
