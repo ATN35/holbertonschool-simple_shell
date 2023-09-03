@@ -2,7 +2,6 @@
 
 /**
  * print_prompt - prints the prompt
- *
  * Description: print a prompt
  * Return: nothing
  */
