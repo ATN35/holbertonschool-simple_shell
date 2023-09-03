@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * **parse_command_line - function to get the executable
  * @command: pointer to the command line
@@ -13,11 +14,11 @@ char **parse_command_line(char *command, char **arguments)
 	int i = 0, count_args = 0;
 
 	arg = strtok(line, " \n");
-	while (arg != NULL) /* counts the number of arguments for malloc*/
+	while (arg != NULL)
 	{
 		arg = strtok(NULL, " \n");
 		count_args++;
-	} /* finished counting*/
+	}
 
 	free(line);
 	if (count_args == 0)
@@ -28,9 +29,8 @@ char **parse_command_line(char *command, char **arguments)
 		exit(EXIT_FAILURE);
 
 	arguments[count_args] = NULL;
-	line = strdup(command); /*go back to start*/
+	line = strdup(command);
 
-	/* put arguments inside array arguments*/
 	arg = strtok(line, " \n");
 	while (arg != NULL)
 	{
