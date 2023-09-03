@@ -4,7 +4,6 @@
  * **parse_command_line - function to get the executable
  * @command: pointer to the command line
  * @arguments: array of pointers to arguments
- *
  * Description: cut the command line into arguments and make an array with it
  * Return: NOTHING
  */
