@@ -7,7 +7,6 @@
  * @env: environment variables
  * @argv: arguments of the ./simple shell
  * @count_command: counts the number of commands executed
- *
  * Description: create a child to execute the command
  * Return: status
  */
