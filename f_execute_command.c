@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * execute_command - execute a command
  * @command: the command to execute
@@ -16,7 +17,6 @@ int execute_command(char *command, char **arguments, char **env,
 {
 	pid_t pid;
 	int status = 0;
-	/*struct stat file_stats;*/
 
 	if (command != NULL)
 	{
