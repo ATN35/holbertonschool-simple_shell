@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * free_args - free arguments
  * @arguments: arguments
